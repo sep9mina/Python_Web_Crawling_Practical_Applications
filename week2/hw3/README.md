@@ -13,9 +13,6 @@
 ## 版本紀錄
 <img width="1464" height="474" alt="image" src="https://github.com/user-attachments/assets/14497438-57a2-4867-98a0-660546e83ab2" />
 
-<img width="1392" height="452" alt="image" src="https://github.com/user-attachments/assets/3714e9e8-d9b8-4d8a-82db-51d98d0c1762" />
-
-
 ## v1.程式碼處理方式
 ##### 1.處理雙層表頭：重新命名為清晰乾淨的單層欄位（幣別、現金買入、現金賣出、即期買入、即期賣出）。
 ##### 2.清洗幣別字串：剔除網頁標籤帶有的多餘空白與英文重複字。
