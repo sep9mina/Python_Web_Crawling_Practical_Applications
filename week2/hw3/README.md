@@ -21,4 +21,8 @@
 ##### 臺灣銀行的 HTML 表格結構較為複雜（包含巢狀標籤與合併格），pandas.read_html() 在使用 lxml 解析失敗時，會自動嘗試切換到容錯率更高的 html5lib 與 beautifulsoup4 解析器。
 ##### 網頁解析套件：pip install html5lib beautifulsoup4
 
-
+## 報錯與排除
+##### 1.ValueError: No tables found 代表 pandas 在抓回來的 HTML 中找不到 <table> 標籤。
+##### 臺灣銀行網站近期加強了防爬蟲機制，若沒有加上完整的瀏覽器標頭（特別是 Accept-Language 等），伺服器回應的內容會是一段被重定向或阻擋的空白提示頁面，而不是原本的匯率頁面。
+##### 解決方式：補齊 Headers，改用 BeautifulSoup 精準鎖定表格
+##### 將請求標頭補齊為完整瀏覽器規格，並透過 beautifulsoup4（bs4）直接抓取匯率表格。
