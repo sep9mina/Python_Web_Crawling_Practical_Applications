@@ -1,4 +1,4 @@
-## 課堂練習３
+<img width="1464" height="474" alt="image" src="https://github.com/user-attachments/assets/14497438-57a2-4867-98a0-660546e83ab2" />## 課堂練習３
 ## 爬取臺灣銀行本日營業時間牌告匯率
 #### 將本日牌告費率存成 20260922.xlsx 檔
 #### URL | https://rate.bot.com.tw/xrt?Lang=zh TW
@@ -10,7 +10,10 @@
 ##### 幣別欄位甚至還混雜了「幣別名稱（如 美金 USD）」與行動版重複文字。
 ##### 如果直接使用最簡單的 pd.read_html 抓下來，欄位會變成多重層級（Tuple 結構），存進 Excel 或查看時容易錯亂。
 
-## 程式碼關鍵處理方式
+<img width="1392" height="452" alt="image" src="https://github.com/user-attachments/assets/3714e9e8-d9b8-4d8a-82db-51d98d0c1762" />
+
+
+## v1.程式碼處理方式
 ##### 1.處理雙層表頭：重新命名為清晰乾淨的單層欄位（幣別、現金買入、現金賣出、即期買入、即期賣出）。
 ##### 2.清洗幣別字串：剔除網頁標籤帶有的多餘空白與英文重複字。
 
@@ -38,7 +41,7 @@
 
 ##### Challenge Validation 是臺銀網站的機器人驗證機制（類似 reCAPTCHA 的技術，這裡用的是加密運算挑戰），它偵測到 requests 送出的請求「不是真的瀏覽器」，就攔截下來丟出這個驗證頁面，不管加多完整的 headers 都沒用——因為它連瀏覽器的 JavaScript 執行環境、TLS 指紋這些都會檢查，單純的 requests 套件模擬不出來。
 
-## 改測試爬官方CSV下載連結
+## v2.改測試爬官方CSV下載連結
 
 <img width="700" height="116" alt="image" src="https://github.com/user-attachments/assets/e4049b64-f056-43a7-9edf-e77b6554b64c" />
 
@@ -67,7 +70,7 @@
 
 ##### 後來發現 pd.read_html() 這條路本身有風險——它是用「內容像不像」去猜欄位和去除重複，容易把資料錯位卻不會報錯。
 
-# 最終版
+# v3.最終版
 ## 换成 BeautifulSoup 版本（用固定 class 名稱精準抓取）
 ##### 程式碼：hw_rate_clean_BeautifulSoup.py
 
