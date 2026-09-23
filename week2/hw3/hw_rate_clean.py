@@ -26,6 +26,11 @@ resp.raise_for_status()
 soup = BeautifulSoup(resp.text, "html.parser")
 table = soup.find("table")
 
+print("狀態碼:", resp.status_code)
+print("內容長度:", len(resp.text))
+print("內容預覽:")
+print(resp.text)
+
 if not table:
     raise ValueError(
         "仍未找到表格，請確認連線狀態或網頁內容是否被阻擋！"
