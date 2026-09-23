@@ -46,9 +46,13 @@
 
 ##改用能真的執行 JavaScript、通過驗證的工具 Selenium 開一個真實 Chrome 瀏覽器去載入頁面。
 ##### 安裝套件：pip install selenium
+##### 程式碼：hw_rate_clean_DataFrame.py
 ##### Selenium 4 之後會自動抓對應版本的 ChromeDriver，不用手動下載，但電腦上要有安裝 Google Chrome 瀏覽器。
 
 ## chrome目前受到自動軟體測試軟體控制
 <img width="958" height="504" alt="image" src="https://github.com/user-attachments/assets/0c1acc01-53e8-49cf-93f7-2e0dd4519c25" />
 
+## Selenium 成功繞過驗證、抓到完整表格，剩下資料整理問題。
 
+##### 錯誤原因：臺銀這個表格為了手機/列印版面相容，把同一組資料重複輸出了兩次（一次帶查詢連結、一次沒有），加上多層表頭（現金匯率/即期匯率各自底下又分本行買入/賣出），pd.read_html() 讀出來就變成 17 欄、而且有 MultiIndex 欄位，這才是存 Excel 會出錯的原因。
+<img width="883" height="385" alt="image" src="https://github.com/user-attachments/assets/b2794292-618f-4487-82cc-a9455c1c09aa" />
