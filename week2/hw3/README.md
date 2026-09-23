@@ -37,3 +37,12 @@
 <img width="710" height="315" alt="image" src="https://github.com/user-attachments/assets/d86bac53-71c2-4b64-b31c-9af57382419e" />
 
 ##### Challenge Validation 是臺銀網站的機器人驗證機制（類似 reCAPTCHA 的技術，這裡用的是加密運算挑戰），它偵測到 requests 送出的請求「不是真的瀏覽器」，就攔截下來丟出這個驗證頁面，不管加多完整的 headers 都沒用——因為它連瀏覽器的 JavaScript 執行環境、TLS 指紋這些都會檢查，單純的 requests 套件模擬不出來。
+
+## 改測試爬官方CSV下載連結
+
+<img width="700" height="116" alt="image" src="https://github.com/user-attachments/assets/e4049b64-f056-43a7-9edf-e77b6554b64c" />
+
+##### CSV 端點也被同一層驗證擋下來了，確定這個網站現在對所有非瀏覽器請求都會擋。
+
+
+
