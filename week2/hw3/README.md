@@ -57,8 +57,9 @@
 ##### 錯誤原因：臺銀這個表格為了手機/列印版面相容，把同一組資料重複輸出了兩次（一次帶查詢連結、一次沒有），加上多層表頭（現金匯率/即期匯率各自底下又分本行買入/賣出），pd.read_html() 讀出來就變成 17 欄、而且有 MultiIndex 欄位，這才是存 Excel 會出錯的原因。
 <img width="883" height="385" alt="image" src="https://github.com/user-attachments/assets/b2794292-618f-4487-82cc-a9455c1c09aa" />
 
-##### 用 pd.read_html() 硬清理
-判斷指引：跑完清理欄位的程式後，先看終端機印出「清理後欄位」到底剩幾個：
+## 用 pd.read_html() 硬清理
+##### 程式碼：hw_rate_clean_pd_read_html.py
+##### 判斷指引：跑完清理欄位的程式後，先看終端機印出「清理後欄位」到底剩幾個：
 
 ##### 如果剛好是 5 欄（幣別、現金買入、現金賣出、即期買入、即期賣出）→ 代表 dropna 跟 duplicated 那兩行清理得很乾淨，可以直接照順序改名存檔
 ##### 如果不是 5 欄 → 代表清理得不夠乾淨（可能還留著查詢連結欄、重複幣別欄之類的雜訊），這時候不要硬改名，因為欄位數量對不上會報錯。
@@ -66,5 +67,8 @@
 
 ##### 後來發現 pd.read_html() 這條路本身有風險——它是用「內容像不像」去猜欄位和去除重複，容易把資料錯位卻不會報錯。
 
-##### 换成 BeautifulSoup 版本（用固定 class 名稱精準抓取）
-
+# 最終版
+## 换成 BeautifulSoup 版本（用固定 class 名稱精準抓取）
+##### 程式碼：hw_rate_clean_BeautifulSoup.py
+<img width="613" height="131" alt="image" src="https://github.com/user-attachments/assets/59ed1e3e-b154-4266-bde5-7fb07c8d0f54" />
+<img width="530" height="303" alt="image" src="https://github.com/user-attachments/assets/5baa4a89-fb36-4361-9f1c-472dd0746ea2" />
