@@ -44,5 +44,11 @@
 
 ##### CSV 端點也被同一層驗證擋下來了，確定這個網站現在對所有非瀏覽器請求都會擋。
 
+##改用能真的執行 JavaScript、通過驗證的工具 Selenium 開一個真實 Chrome 瀏覽器去載入頁面。
+##### 安裝套件：pip install selenium
+##### Selenium 4 之後會自動抓對應版本的 ChromeDriver，不用手動下載，但電腦上要有安裝 Google Chrome 瀏覽器。
+
+## 自動測試受到限制
+<img width="958" height="504" alt="image" src="https://github.com/user-attachments/assets/0c1acc01-53e8-49cf-93f7-2e0dd4519c25" />
 
 
