@@ -12,3 +12,10 @@
 #### 程式碼關鍵處理方式
 ##### 1.處理雙層表頭：重新命名為清晰乾淨的單層欄位（幣別、現金買入、現金賣出、即期買入、即期賣出）。
 ##### 2.清洗幣別字串：剔除網頁標籤帶有的多餘空白與英文重複字。
+
+#### 安裝套件
+##### lxml 與 openpyxl：pip install lxml openpyxl
+##### pandas 及相關套件：pip install requests pandas openpyxl lxml
+
+##### 臺灣銀行的 HTML 表格結構較為複雜（包含巢狀標籤與合併格），pandas.read_html() 在使用 lxml 解析失敗時，會自動嘗試切換到容錯率更高的 html5lib 與 beautifulsoup4 解析器。
+##### 網頁解析套件：pip install html5lib beautifulsoup4
