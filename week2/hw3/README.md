@@ -70,5 +70,7 @@
 # 最終版
 ## 换成 BeautifulSoup 版本（用固定 class 名稱精準抓取）
 ##### 程式碼：hw_rate_clean_BeautifulSoup.py
+
 <img width="613" height="131" alt="image" src="https://github.com/user-attachments/assets/59ed1e3e-b154-4266-bde5-7fb07c8d0f54" />
+
 <img width="530" height="303" alt="image" src="https://github.com/user-attachments/assets/5baa4a89-fb36-4361-9f1c-472dd0746ea2" />
