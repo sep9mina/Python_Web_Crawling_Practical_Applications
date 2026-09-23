@@ -1,4 +1,4 @@
-<img width="1464" height="474" alt="image" src="https://github.com/user-attachments/assets/14497438-57a2-4867-98a0-660546e83ab2" />## 課堂練習３
+## 課堂練習３
 ## 爬取臺灣銀行本日營業時間牌告匯率
 #### 將本日牌告費率存成 20260922.xlsx 檔
 #### URL | https://rate.bot.com.tw/xrt?Lang=zh TW
@@ -9,6 +9,9 @@
 ##### 下層是細項：現金匯率底下又拆成「本行買入」、「本行賣出」；即期匯率也拆成「本行買入」、「本行賣出」。
 ##### 幣別欄位甚至還混雜了「幣別名稱（如 美金 USD）」與行動版重複文字。
 ##### 如果直接使用最簡單的 pd.read_html 抓下來，欄位會變成多重層級（Tuple 結構），存進 Excel 或查看時容易錯亂。
+
+## 版本紀錄
+<img width="1464" height="474" alt="image" src="https://github.com/user-attachments/assets/14497438-57a2-4867-98a0-660546e83ab2" />
 
 <img width="1392" height="452" alt="image" src="https://github.com/user-attachments/assets/3714e9e8-d9b8-4d8a-82db-51d98d0c1762" />
 
