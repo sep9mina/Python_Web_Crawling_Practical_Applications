@@ -26,3 +26,14 @@
 ##### 臺灣銀行網站近期加強了防爬蟲機制，若沒有加上完整的瀏覽器標頭（特別是 Accept-Language 等），伺服器回應的內容會是一段被重定向或阻擋的空白提示頁面，而不是原本的匯率頁面。
 ##### 解決方式：補齊 Headers，改用 BeautifulSoup 精準鎖定表格
 ##### 將請求標頭補齊為完整瀏覽器規格，並透過 beautifulsoup4（bs4）直接抓取匯率表格。
+##### 以上還是爬不到資料
+
+### 加幾行 debug，先確認電腦實際收到的內容
+##### print("狀態碼:", resp.status_code)
+##### print("內容長度:", len(resp.text))
+##### print("內容預覽:")
+##### print(resp.text)
+
+<img width="710" height="315" alt="image" src="https://github.com/user-attachments/assets/d86bac53-71c2-4b64-b31c-9af57382419e" />
+
+##### Challenge Validation 是臺銀網站的機器人驗證機制（類似 reCAPTCHA 的技術，這裡用的是加密運算挑戰），它偵測到 requests 送出的請求「不是真的瀏覽器」，就攔截下來丟出這個驗證頁面，不管加多完整的 headers 都沒用——因為它連瀏覽器的 JavaScript 執行環境、TLS 指紋這些都會檢查，單純的 requests 套件模擬不出來。
