@@ -1,4 +1,4 @@
-<img width="1675" height="794" alt="image" src="https://github.com/user-attachments/assets/febcecca-1480-48c0-a483-f03668632d2b" />
+<img width="698" height="497" alt="image" src="https://github.com/user-attachments/assets/8d6b6c4c-8307-40d2-9ad3-f08fe788ff63" /><img width="1675" height="794" alt="image" src="https://github.com/user-attachments/assets/febcecca-1480-48c0-a483-f03668632d2b" />
 
 ## 自動爬取冰球隊伍統計網頁的搜尋結果，將資料儲存為 CSV 試算表，並完整記錄網路連線與處理流程的日誌（log）。   
 ##### 1.連線與日誌記錄：利用 Python 內建的 logging 模組，完整記錄連線除錯細節（包含毫秒時間戳記與底層 urllib3 連線資訊）。 
@@ -12,4 +12,4 @@
 
 <img width="1230" height="156" alt="image" src="https://github.com/user-attachments/assets/53d1e23d-d385-46b2-845e-04072b115caf" />
 
-![Uploading image.png…]()
+<img width="702" height="499" alt="image" src="https://github.com/user-attachments/assets/b6f85da0-fa98-4a98-85e4-4496ebc3f7ae" />
