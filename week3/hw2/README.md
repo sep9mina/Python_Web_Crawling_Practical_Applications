@@ -8,7 +8,7 @@
 
 <img width="707" height="746" alt="image" src="https://github.com/user-attachments/assets/fc5426d6-8f10-45fa-a860-f11c6c69aaea" />
 
-##　配置日誌系統（Logging Setup）
+## 配置日誌系統（Logging Setup）
 #### 設定記錄檔名為 w03.log。
 #### 定義記錄格式（包含日期時間、毫秒、層級、模組名稱與訊息內容）。 
 #### 開啟 urllib3 的 DEBUG 記錄層級，藉此記錄 HTTPS 底層連線的握手與狀態。 
