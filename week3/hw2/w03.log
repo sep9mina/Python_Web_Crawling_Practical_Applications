@@ -1,0 +1,5 @@
+2026-09-29 20:35:42,727 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): www.scrapethissite.com:443
+2026-09-29 20:35:43,977 [DEBUG] urllib3.connectionpool: https://www.scrapethissite.com:443 "GET /pages/forms/?q=boston&per_page=25 HTTP/1.1" 200 None
+2026-09-29 20:35:44,152 [INFO] w03: 狀態碼=200，網址=https://www.scrapethissite.com/pages/forms/?q=boston&per_page=25
+2026-09-29 20:35:44,187 [INFO] w03: 取得 21 筆 x 9 欄
+2026-09-29 20:35:44,199 [INFO] w03: 已存檔：D:\A130E105\output.csv
