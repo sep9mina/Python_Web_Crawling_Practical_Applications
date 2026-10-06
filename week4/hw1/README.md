@@ -15,3 +15,6 @@
 #### 寫入 Excel：使用 Pandas 的 to_excel() 函式，若不需要保留預設數字索引，設定 index=False 即可讓產出的表格更乾淨。
 
 <img width="1152" height="302" alt="image" src="https://github.com/user-attachments/assets/d49609b5-5c27-411f-a97a-0712a2c5cc47" />
+
+<img width="1598" height="768" alt="image" src="https://github.com/user-attachments/assets/e6a0f6be-04ad-4662-9b4f-7e65cf9c72bc" />
+<img width="357" height="124" alt="image" src="https://github.com/user-attachments/assets/65219d2d-806c-4987-acbe-842eaefd8396" />
