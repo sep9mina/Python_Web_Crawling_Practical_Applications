@@ -2,7 +2,7 @@
 
 <img width="955" height="171" alt="image" src="https://github.com/user-attachments/assets/747fadf4-6b92-4248-ad5e-6293bd0dca48" />
 
-## 一、 核心使用技術
+## 技術
 #### requests 模組：
 ##### 負責模擬瀏覽器發送 HTTP GET 請求，向目標伺服器取得靜態 HTML 網頁原始碼。
 ##### 搭配 User-Agent 標頭避免被基礎反爬機制阻擋，並設定 utf-8 編碼防止文字亂碼。
