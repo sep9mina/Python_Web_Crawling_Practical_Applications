@@ -24,7 +24,7 @@ response.encoding = "utf-8"
 
 soup = BeautifulSoup(response.text, "html.parser")
 
-# 3. 作業規定的 9 個欄位名稱
+# 3. 9個欄位名稱
 headers_csv = [
     "team_name",
     "year",
